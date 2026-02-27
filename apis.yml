@@ -1,0 +1,102 @@
+name: Nexus Repository Manager
+description: Enterprise-grade repository manager supporting multiple formats including Maven, npm, Docker, PyPI, and more
+image: https://www.sonatype.com/hubfs/nexus-icon.png
+url: https://www.sonatype.com/products/nexus-repository
+created: '2024'
+modified: '2024'
+tags:
+- repository manager
+- artifact management
+- maven
+- npm
+- docker
+- devops
+- package management
+apis:
+- name: Nexus Repository Manager REST API
+  description: Comprehensive REST API for managing repositories, components, assets, and configurations
+  baseURL: https://your-nexus-instance.com/service/rest
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  image: https://www.sonatype.com/hubfs/nexus-icon.png
+  version: v1
+  tags:
+  - REST
+  - repositories
+  - components
+  - security
+  properties:
+  - type: Documentation
+    url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  - type: OpenAPI
+    url: https://your-nexus-instance.com/service/rest/swagger.json
+  - type: Authentication
+    url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/authentication
+  contact:
+  - type: Support
+    url: https://support.sonatype.com
+- name: Nexus Repository Manager Components API
+  description: API for searching, uploading, and managing components and assets
+  baseURL: https://your-nexus-instance.com/service/rest/v1/components
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/components-api
+  version: v1
+  tags:
+  - components
+  - assets
+  - search
+  - upload
+  properties:
+  - type: Documentation
+    url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/components-api
+- name: Nexus Repository Manager Search API
+  description: API for searching components across repositories
+  baseURL: https://your-nexus-instance.com/service/rest/v1/search
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/search-api
+  version: v1
+  tags:
+  - search
+  - query
+  - components
+  properties:
+  - type: Documentation
+    url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/search-api
+- name: Nexus Repository Manager Security API
+  description: API for managing users, roles, privileges, and security configurations
+  baseURL: https://your-nexus-instance.com/service/rest/v1/security
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/security-management
+  version: v1
+  tags:
+  - security
+  - users
+  - roles
+  - privileges
+  properties:
+  - type: Documentation
+    url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/security-management
+- name: Nexus Repository Manager Script API
+  description: API for executing and managing Groovy scripts for automation
+  baseURL: https://your-nexus-instance.com/service/rest/v1/script
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/script-api
+  version: v1
+  tags:
+  - automation
+  - scripting
+  - groovy
+  properties:
+  - type: Documentation
+    url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/script-api
+maintainers:
+- name: Sonatype
+  email: support@sonatype.com
+  url: https://www.sonatype.com
+common:
+  authentication:
+  - type: Basic Auth
+    description: Username and password authentication
+  - type: Token
+    description: User token authentication
+  - type: API Key
+    description: API key for programmatic access
+  responseFormats:
+  - application/json
+  rateLimit:
+    description: Rate limiting may apply based on instance configuration
