@@ -7,15 +7,14 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Repository Manager
   - Artifact Management
-  - Maven
-  - npm
-  - Docker
   - DevOps
+  - Docker
+  - Maven
+  - Npm
   - Package Management
-url: 
-  https://raw.githubusercontent.com/api-evangelist/nexus/refs/heads/main/apis.yml
+  - Repository Manager
+url: https://raw.githubusercontent.com/api-evangelist/nexus/refs/heads/main/apis.yml
 created: '2024-01-01'
 modified: '2026-03-16'
 specificationVersion: '0.19'
@@ -24,21 +23,18 @@ apis:
     name: Nexus Repository Manager REST API
     description: >-
       Comprehensive REST API for managing repositories, components, assets, and configurations.
-    humanURL: 
-      https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+    humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
     baseURL: https://your-nexus-instance.com/service/rest
     tags:
-      - REST
-      - Repositories
       - Components
+      - Repositories
+      - REST
       - Security
     properties:
       - type: Documentation
-        url: 
-          https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+        url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
       - type: Authentication
-        url: 
-          https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/authentication
+        url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/authentication
 common:
   - type: Website
     url: https://www.sonatype.com/products/nexus-repository
