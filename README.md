@@ -1,99 +1,60 @@
 # Nexus Repository Manager (nexus)
-Enterprise-grade repository manager supporting multiple formats including Maven, npm, Docker, PyPI, and more
 
-**URL:** [Visit APIs.json URL](https://www.sonatype.com/products/nexus-repository)
+Nexus Repository Manager by Sonatype is an enterprise-grade artifact repository manager supporting multiple package formats including Maven, npm, Docker, PyPI, NuGet, RubyGems, Helm, Go, and more. It provides a central hub for managing software supply chain components, proxying remote repositories, hosting private artifacts, and grouping repositories. Nexus exposes a comprehensive REST API documented via an OpenAPI/Swagger specification served at `<nexus_url>/service/rest/swagger.json` on each instance.
 
-## Tags:
+**APIs.yml URL:** https://raw.githubusercontent.com/api-evangelist/nexus/refs/heads/main/apis.yml
 
- - repository manager, artifact management, maven, npm, docker, devops, package management
+## Scope
+
+- **Type:** Index
+- **Position:** Consuming
+- **Access:** 3rd-Party
+
+## Tags
+
+- Artifact Management
+- DevOps
+- Docker
+- Maven
+- Npm
+- Package Management
+- Repository Manager
+- Software Supply Chain
 
 ## Timestamps
 
-- **Created:** 2024 
-- **Modified:** 2024 
+- **Created:** 2024-01-01
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Nexus Repository Manager REST API
-Comprehensive REST API for managing repositories, components, assets, and configurations
 
-**Human URL:** [https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api)
+Comprehensive REST API for managing repositories, components, assets, search, security, blob stores, capabilities, tasks, tags, staging, and scripts in Sonatype Nexus Repository Manager 3. The full OpenAPI specification is available from each Nexus instance at `/service/rest/swagger.json` and is explorable via the built-in Swagger UI under System Settings > API.
 
+**Human URL:** https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
 
-#### Tags:
+**Base URL:** `https://your-nexus-instance.example.com/service/rest`
 
- - REST, repositories, components, security
+**Tags:** Assets, Blob Stores, Capabilities, Components, Repositories, REST, Search, Security, Staging, Tags, Tasks
 
-#### Properties
+**Properties:**
 
 - [Documentation](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api)
-- [OpenAPI](https://your-nexus-instance.com/service/rest/swagger.json)
 - [Authentication](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/authentication)
+- [SwaggerUI](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/api-reference-documentation)
 
-### Nexus Repository Manager Components API
-API for searching, uploading, and managing components and assets
-
-**Human URL:** [https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/components-api](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/components-api)
-
-
-#### Tags:
-
- - components, assets, search, upload
-
-#### Properties
-
-- [Documentation](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/components-api)
-
-### Nexus Repository Manager Search API
-API for searching components across repositories
-
-**Human URL:** [https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/search-api](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/search-api)
-
-
-#### Tags:
-
- - search, query, components
-
-#### Properties
-
-- [Documentation](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/search-api)
-
-### Nexus Repository Manager Security API
-API for managing users, roles, privileges, and security configurations
-
-**Human URL:** [https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/security-management](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/security-management)
-
-
-#### Tags:
-
- - security, users, roles, privileges
-
-#### Properties
-
-- [Documentation](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/security-management)
-
-### Nexus Repository Manager Script API
-API for executing and managing Groovy scripts for automation
-
-**Human URL:** [https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/script-api](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/script-api)
-
-
-#### Tags:
-
- - automation, scripting, groovy
-
-#### Properties
-
-- [Documentation](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/script-api)
+> Note: This repository does not vendor a static OpenAPI spec because the spec is instance-specific and dynamically generated on each Nexus deployment. To obtain the spec, fetch `https://<your-nexus-host>/service/rest/swagger.json` from a running Nexus 3 instance.
 
 ## Common Properties
 
-- authentication
-- responseFormats
-- rateLimit
+- [Website](https://www.sonatype.com/products/nexus-repository)
+- [Documentation](https://help.sonatype.com/repomanager3)
+- [Support](https://support.sonatype.com)
+- [Getting Started](https://help.sonatype.com/repomanager3/getting-started)
+- [GitHub](https://github.com/sonatype/nexus-public)
 
 ## Maintainers
 
-**FN:** Sonatype
-
-**Email:** support@sonatype.com
+- **FN:** Kin Lane
+- **Email:** kin@apievangelist.com
