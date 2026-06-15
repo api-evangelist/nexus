@@ -1,0 +1,335 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sonatype Nexus Repository REST API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Status",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Check Nexus health status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/status"
+          },
+          "docs": "Check Nexus health status"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Repositories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all repositories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/repositories"
+          },
+          "docs": "List all repositories"
+        },
+        {
+          "info": {
+            "name": "List repository settings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/repositorySettings"
+          },
+          "docs": "List repository settings"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Components",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List components in a repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/components",
+            "params": [
+              {
+                "name": "repository",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "continuationToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List components in a repository"
+        },
+        {
+          "info": {
+            "name": "Upload a component",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{nexus_url}/service/rest/v1/components",
+            "params": [
+              {
+                "name": "repository",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Upload a component"
+        },
+        {
+          "info": {
+            "name": "Get a component by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/components/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a component by ID"
+        },
+        {
+          "info": {
+            "name": "Delete a component by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{nexus_url}/service/rest/v1/components/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a component by ID"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List assets in a repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/assets",
+            "params": [
+              {
+                "name": "repository",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "continuationToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List assets in a repository"
+        },
+        {
+          "info": {
+            "name": "Get an asset by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/assets/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an asset by ID"
+        },
+        {
+          "info": {
+            "name": "Delete an asset by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{nexus_url}/service/rest/v1/assets/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an asset by ID"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for components",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "continuationToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search for components"
+        },
+        {
+          "info": {
+            "name": "Search for assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/search/assets",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search for assets"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "BlobStores",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List blob stores",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/blobstores"
+          },
+          "docs": "List blob stores"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Tasks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List scheduled tasks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/tasks"
+          },
+          "docs": "List scheduled tasks"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Security",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/security/users"
+          },
+          "docs": "List users"
+        },
+        {
+          "info": {
+            "name": "List roles",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/security/roles"
+          },
+          "docs": "List roles"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
