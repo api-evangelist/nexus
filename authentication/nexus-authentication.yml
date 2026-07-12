@@ -1,0 +1,21 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/nexus-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: HTTP Basic authentication with a Nexus user account.
+  sources:
+  - openapi/nexus-openapi.yml
+- name: userToken
+  type: http
+  scheme: bearer
+  description: |-
+    Nexus user token authentication. Tokens can be generated
+    per user when User Tokens are enabled on the instance.
+  sources:
+  - openapi/nexus-openapi.yml
