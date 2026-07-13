@@ -1,0 +1,21 @@
+{
+  "repo": "nexus",
+  "feeds": [
+    {
+      "source": "https://www.sonatype.com/blog/rss.xml",
+      "feed_url": "https://www.sonatype.com/blog/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.sonatype.com/products/integrations",
+      "feed_url": "https://www.sonatype.com/products/integrations",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 12
+}
