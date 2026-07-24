@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: Sonatype Nexus Repository REST Assets Repositories API
+  description: 'Sonatype Nexus Repository Manager 3 exposes a REST API
+
+    (under /service/rest/) for managing assets, components,
+
+    repositories, blob stores, search, security, tasks, and
+
+    related resources. The full OpenAPI document for a given
+
+    instance is published at /service/rest/swagger.json.
+
+    '
+  version: v1
+servers:
+- url: '{nexus_url}/service/rest'
+  description: Sonatype Nexus Repository instance base
+  variables:
+    nexus_url:
+      default: https://nexus.example.com
+      description: The base URL of your Nexus Repository Manager instance
+security:
+- basicAuth: []
+- userToken: []
+tags:
+- name: Repositories
+paths:
+  /v1/repositories:
+    get:
+      summary: List all repositories
+      operationId: listRepositories
+      tags:
+      - Repositories
+      responses:
+        '200':
+          description: Collection of repositories
+  /v1/repositorySettings:
+    get:
+      summary: List repository settings
+      operationId: listRepositorySettings
+      tags:
+      - Repositories
+      responses:
+        '200':
+          description: Repository settings
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic authentication with a Nexus user account.
+    userToken:
+      type: http
+      scheme: bearer
+      description: 'Nexus user token authentication. Tokens can be generated
+
+        per user when User Tokens are enabled on the instance.
+
+        '
