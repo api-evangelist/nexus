@@ -9,7 +9,20 @@ description: >-
   documented via an OpenAPI/Swagger specification served at
   `<nexus_url>/service/rest/swagger.json` on each instance.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nexus.png
 tags:
   - Artifact Management
   - DevOps
@@ -24,35 +37,116 @@ created: '2024-01-01'
 modified: '2026-04-28'
 specificationVersion: '0.19'
 apis:
-  - aid: nexus:nexus-rest-api
-    name: Nexus Repository Manager REST API
-    description: >-
-      Comprehensive REST API for managing repositories, components, assets, search,
-      security, blob stores, capabilities, tasks, tags, staging, and scripts in
-      Sonatype Nexus Repository Manager 3. The full OpenAPI specification is
-      available from each Nexus instance at `/service/rest/swagger.json` and is
-      explorable via the built-in Swagger UI under System Settings > API.
-    humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
-    baseURL: https://your-nexus-instance.example.com/service/rest
-    tags:
-      - Assets
-      - Blob Stores
-      - Capabilities
-      - Components
-      - Repositories
-      - REST
-      - Search
-      - Security
-      - Staging
-      - Tags
-      - Tasks
-    properties:
-      - type: Documentation
-        url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
-      - type: Authentication
-        url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/authentication
-      - type: SwaggerUI
-        url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/api-reference-documentation
+- aid: nexus:nexus-rest-api
+  name: Nexus Repository Manager REST API
+  description: >-
+    Comprehensive REST API for managing repositories, components, assets, search, security, blob stores,
+    capabilities, tasks, tags, staging, and scripts in Sonatype Nexus Repository Manager 3. The full OpenAPI
+    specification is available from each Nexus instance at `/service/rest/swagger.json` and is explorable
+    via the built-in Swagger UI under System Settings > API.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - Assets
+  - Blob Stores
+  - Capabilities
+  - Components
+  - Repositories
+  - REST
+  - Search
+  - Security
+  - Staging
+  - Tags
+  - Tasks
+  properties:
+  - type: Documentation
+    url: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  - type: Authentication
+    url: >-
+      https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/authentication
+  - type: SwaggerUI
+    url: >-
+      https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/api-reference-documentation
+- aid: nexus:nexus-assets-api
+  name: Nexus Repository Manager Assets API
+  description: The Assets API from Nexus Repository Manager — 2 operation(s) for assets.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - Assets
+  properties:
+  - type: OpenAPI
+    url: openapi/nexus-assets-api-openapi.yml
+- aid: nexus:nexus-blobstores-api
+  name: Nexus Repository Manager BlobStores API
+  description: The BlobStores API from Nexus Repository Manager — 1 operation(s) for blobstores.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - BlobStores
+  properties:
+  - type: OpenAPI
+    url: openapi/nexus-blobstores-api-openapi.yml
+- aid: nexus:nexus-components-api
+  name: Nexus Repository Manager Components API
+  description: The Components API from Nexus Repository Manager — 2 operation(s) for components.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - Components
+  properties:
+  - type: OpenAPI
+    url: openapi/nexus-components-api-openapi.yml
+- aid: nexus:nexus-repositories-api
+  name: Nexus Repository Manager Repositories API
+  description: The Repositories API from Nexus Repository Manager — 2 operation(s) for repositories.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - Repositories
+  properties:
+  - type: OpenAPI
+    url: openapi/nexus-repositories-api-openapi.yml
+- aid: nexus:nexus-search-api
+  name: Nexus Repository Manager Search API
+  description: The Search API from Nexus Repository Manager — 2 operation(s) for search.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/nexus-search-api-openapi.yml
+- aid: nexus:nexus-security-api
+  name: Nexus Repository Manager Security API
+  description: The Security API from Nexus Repository Manager — 2 operation(s) for security.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - Security
+  properties:
+  - type: OpenAPI
+    url: openapi/nexus-security-api-openapi.yml
+- aid: nexus:nexus-status-api
+  name: Nexus Repository Manager Status API
+  description: The Status API from Nexus Repository Manager — 1 operation(s) for status.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - Status
+  properties:
+  - type: OpenAPI
+    url: openapi/nexus-status-api-openapi.yml
+- aid: nexus:nexus-tasks-api
+  name: Nexus Repository Manager Tasks API
+  description: The Tasks API from Nexus Repository Manager — 1 operation(s) for tasks.
+  humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
+  baseURL: https://your-nexus-instance.example.com/service/rest
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/nexus-tasks-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/nexus-agentic-access.yml
