@@ -1,0 +1,28 @@
+{
+  "provider": "nexus",
+  "sources": [
+    "nexus-assets-api-openapi.yml",
+    "nexus-blobstores-api-openapi.yml",
+    "nexus-components-api-openapi.yml",
+    "nexus-repositories-api-openapi.yml",
+    "nexus-search-api-openapi.yml",
+    "nexus-security-api-openapi.yml",
+    "nexus-status-api-openapi.yml",
+    "nexus-tasks-api-openapi.yml"
+  ],
+  "outputs": [
+    "nexus-assets-api-openapi.yml",
+    "nexus-blobstores-api-openapi.yml",
+    "nexus-components-api-openapi.yml",
+    "nexus-repositories-api-openapi.yml",
+    "nexus-search-api-openapi.yml",
+    "nexus-security-api-openapi.yml",
+    "nexus-status-api-openapi.yml",
+    "nexus-tasks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

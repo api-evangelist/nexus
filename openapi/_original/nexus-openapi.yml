@@ -1,0 +1,231 @@
+openapi: 3.1.0
+info:
+  title: Sonatype Nexus Repository REST API
+  description: |
+    Sonatype Nexus Repository Manager 3 exposes a REST API
+    (under /service/rest/) for managing assets, components,
+    repositories, blob stores, search, security, tasks, and
+    related resources. The full OpenAPI document for a given
+    instance is published at /service/rest/swagger.json.
+  version: "v1"
+servers:
+  - url: "{nexus_url}/service/rest"
+    description: Sonatype Nexus Repository instance base
+    variables:
+      nexus_url:
+        default: https://nexus.example.com
+        description: The base URL of your Nexus Repository Manager instance
+security:
+  - basicAuth: []
+  - userToken: []
+paths:
+  /v1/status:
+    get:
+      summary: Check Nexus health status
+      operationId: getStatus
+      tags: [Status]
+      responses:
+        "200":
+          description: Nexus is available
+  /v1/repositories:
+    get:
+      summary: List all repositories
+      operationId: listRepositories
+      tags: [Repositories]
+      responses:
+        "200":
+          description: Collection of repositories
+  /v1/repositorySettings:
+    get:
+      summary: List repository settings
+      operationId: listRepositorySettings
+      tags: [Repositories]
+      responses:
+        "200":
+          description: Repository settings
+  /v1/components:
+    get:
+      summary: List components in a repository
+      operationId: listComponents
+      tags: [Components]
+      parameters:
+        - in: query
+          name: repository
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: continuationToken
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Page of components
+    post:
+      summary: Upload a component
+      operationId: uploadComponent
+      tags: [Components]
+      parameters:
+        - in: query
+          name: repository
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Component uploaded
+  /v1/components/{id}:
+    get:
+      summary: Get a component by ID
+      operationId: getComponent
+      tags: [Components]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Component details
+    delete:
+      summary: Delete a component by ID
+      operationId: deleteComponent
+      tags: [Components]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Component deleted
+  /v1/assets:
+    get:
+      summary: List assets in a repository
+      operationId: listAssets
+      tags: [Assets]
+      parameters:
+        - in: query
+          name: repository
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: continuationToken
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Page of assets
+  /v1/assets/{id}:
+    get:
+      summary: Get an asset by ID
+      operationId: getAsset
+      tags: [Assets]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Asset details
+    delete:
+      summary: Delete an asset by ID
+      operationId: deleteAsset
+      tags: [Assets]
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Asset deleted
+  /v1/search:
+    get:
+      summary: Search for components
+      operationId: searchComponents
+      tags: [Search]
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+        - in: query
+          name: continuationToken
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Search results
+  /v1/search/assets:
+    get:
+      summary: Search for assets
+      operationId: searchAssets
+      tags: [Search]
+      parameters:
+        - in: query
+          name: q
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Asset search results
+  /v1/blobstores:
+    get:
+      summary: List blob stores
+      operationId: listBlobStores
+      tags: [BlobStores]
+      responses:
+        "200":
+          description: Blob stores
+  /v1/tasks:
+    get:
+      summary: List scheduled tasks
+      operationId: listTasks
+      tags: [Tasks]
+      responses:
+        "200":
+          description: Tasks collection
+  /v1/security/users:
+    get:
+      summary: List users
+      operationId: listUsers
+      tags: [Security]
+      responses:
+        "200":
+          description: Users collection
+  /v1/security/roles:
+    get:
+      summary: List roles
+      operationId: listRoles
+      tags: [Security]
+      responses:
+        "200":
+          description: Roles collection
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic authentication with a Nexus user account.
+    userToken:
+      type: http
+      scheme: bearer
+      description: |
+        Nexus user token authentication. Tokens can be generated
+        per user when User Tokens are enabled on the instance.
+tags:
+  - name: Status
+  - name: Repositories
+  - name: Components
+  - name: Assets
+  - name: Search
+  - name: BlobStores
+  - name: Tasks
+  - name: Security
