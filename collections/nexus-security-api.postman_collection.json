@@ -1,0 +1,220 @@
+{
+  "item": [
+    {
+      "id": "e2737e03-37db-4b2e-bc2a-29a2682bbce0",
+      "name": "Security",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7c9d52a5-412a-4adc-b2fa-2ec3777af8da",
+          "name": "List users",
+          "request": {
+            "name": "List users",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "security",
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The base URL of your Nexus Repository Manager instance",
+                  "type": "any",
+                  "value": "{{nexus_url}}",
+                  "key": "nexus_url"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "da9e0f4f-f49b-4f5c-99c8-2e2ff457f96a",
+              "name": "Users collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "security",
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The base URL of your Nexus Repository Manager instance",
+                      "type": "any",
+                      "value": "{{nexus_url}}",
+                      "key": "nexus_url"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "22873402-6d32-402b-8f0f-0a5bebd0c38d",
+          "name": "List roles",
+          "request": {
+            "name": "List roles",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "security",
+                "roles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The base URL of your Nexus Repository Manager instance",
+                  "type": "any",
+                  "value": "{{nexus_url}}",
+                  "key": "nexus_url"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "776bf171-e5e2-4ea1-b321-5d824a9a4c6a",
+              "name": "Roles collection",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "security",
+                    "roles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The base URL of your Nexus Repository Manager instance",
+                      "type": "any",
+                      "value": "{{nexus_url}}",
+                      "key": "nexus_url"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The base URL of your Nexus Repository Manager instance",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "https://nexus.example.com",
+      "key": "nexus_url"
+    },
+    {
+      "type": "string",
+      "value": "{{nexus_url}}/service/rest",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "521a8dc7-2be1-4500-9add-a92c936bd355",
+    "name": "Sonatype Nexus Repository REST Assets Security API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Sonatype Nexus Repository Manager 3 exposes a REST API\n(under /service/rest/) for managing assets, components,\nrepositories, blob stores, search, security, tasks, and\nrelated resources. The full OpenAPI document for a given\ninstance is published at /service/rest/swagger.json.\n",
+      "type": "text/plain"
+    }
+  }
+}

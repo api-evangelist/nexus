@@ -1,0 +1,350 @@
+{
+  "item": [
+    {
+      "id": "613bcf69-8b49-4ad1-a0a9-ebbc92abc811",
+      "name": "Assets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bf25273f-50b6-456a-b1c8-d43025d5730e",
+          "name": "List assets in a repository",
+          "request": {
+            "name": "List assets in a repository",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "assets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "repository",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "continuationToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "The base URL of your Nexus Repository Manager instance",
+                  "type": "any",
+                  "value": "{{nexus_url}}",
+                  "key": "nexus_url"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "27e91492-4a28-45a1-9fd7-6fcd449c4cbd",
+              "name": "Page of assets",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "repository",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "continuationToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "The base URL of your Nexus Repository Manager instance",
+                      "type": "any",
+                      "value": "{{nexus_url}}",
+                      "key": "nexus_url"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "aa5067f0-3b07-4537-bd6a-16937fdf3c83",
+          "name": "Get an asset by ID",
+          "request": {
+            "name": "Get an asset by ID",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "assets",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The base URL of your Nexus Repository Manager instance",
+                  "type": "any",
+                  "value": "{{nexus_url}}",
+                  "key": "nexus_url"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d737e521-bb88-49a9-a498-37c27e054f4a",
+              "name": "Asset details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "assets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The base URL of your Nexus Repository Manager instance",
+                      "type": "any",
+                      "value": "{{nexus_url}}",
+                      "key": "nexus_url"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "af312117-dcf6-4861-b830-29a021d13a42",
+          "name": "Delete an asset by ID",
+          "request": {
+            "name": "Delete an asset by ID",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "assets",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The base URL of your Nexus Repository Manager instance",
+                  "type": "any",
+                  "value": "{{nexus_url}}",
+                  "key": "nexus_url"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e9f05f22-9846-41d1-85cd-fc9fdd9aa307",
+              "name": "Asset deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "assets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The base URL of your Nexus Repository Manager instance",
+                      "type": "any",
+                      "value": "{{nexus_url}}",
+                      "key": "nexus_url"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The base URL of your Nexus Repository Manager instance",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "https://nexus.example.com",
+      "key": "nexus_url"
+    },
+    {
+      "type": "string",
+      "value": "{{nexus_url}}/service/rest",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f07e4f62-eeff-45ce-b45d-11a6288b6679",
+    "name": "Sonatype Nexus Repository REST Assets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Sonatype Nexus Repository Manager 3 exposes a REST API\n(under /service/rest/) for managing assets, components,\nrepositories, blob stores, search, security, tasks, and\nrelated resources. The full OpenAPI document for a given\ninstance is published at /service/rest/swagger.json.\n",
+      "type": "text/plain"
+    }
+  }
+}

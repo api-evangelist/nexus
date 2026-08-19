@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sonatype Nexus Repository REST Assets Search API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search for components",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/search",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "continuationToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search for components"
+        },
+        {
+          "info": {
+            "name": "Search for assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/search/assets",
+            "params": [
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search for assets"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

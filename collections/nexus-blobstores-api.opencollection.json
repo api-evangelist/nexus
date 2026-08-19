@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sonatype Nexus Repository REST Assets BlobStores API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "BlobStores",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List blob stores",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/blobstores"
+          },
+          "docs": "List blob stores"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

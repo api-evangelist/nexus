@@ -1,0 +1,102 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sonatype Nexus Repository REST Assets Components API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Components",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List components in a repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/components",
+            "params": [
+              {
+                "name": "repository",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "continuationToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List components in a repository"
+        },
+        {
+          "info": {
+            "name": "Upload a component",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{nexus_url}/service/rest/v1/components",
+            "params": [
+              {
+                "name": "repository",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Upload a component"
+        },
+        {
+          "info": {
+            "name": "Get a component by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/components/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a component by ID"
+        },
+        {
+          "info": {
+            "name": "Delete a component by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{nexus_url}/service/rest/v1/components/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a component by ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

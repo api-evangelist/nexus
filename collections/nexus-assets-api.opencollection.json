@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sonatype Nexus Repository REST Assets API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List assets in a repository",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/assets",
+            "params": [
+              {
+                "name": "repository",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "continuationToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List assets in a repository"
+        },
+        {
+          "info": {
+            "name": "Get an asset by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{nexus_url}/service/rest/v1/assets/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an asset by ID"
+        },
+        {
+          "info": {
+            "name": "Delete an asset by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{nexus_url}/service/rest/v1/assets/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an asset by ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
