@@ -28,6 +28,15 @@ tags:
   - DevOps
   - Docker
   - Maven
+  - npm
+  - Package Management
+  - Repository Manager
+  - Software Supply Chain
+tags_raw:
+  - Artifact Management
+  - DevOps
+  - Docker
+  - Maven
   - Npm
   - Package Management
   - Repository Manager
@@ -47,6 +56,18 @@ apis:
   humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
   baseURL: https://your-nexus-instance.example.com/service/rest
   tags:
+  - Assets
+  - Blob Stores
+  - Capabilities
+  - Components
+  - Repositories
+  - REST
+  - Search
+  - Security
+  - Staging
+  - Tags
+  - Task
+  tags_raw:
   - Assets
   - Blob Stores
   - Capabilities
@@ -83,6 +104,8 @@ apis:
   humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
   baseURL: https://your-nexus-instance.example.com/service/rest
   tags:
+  - Blob Stores
+  tags_raw:
   - BlobStores
   properties:
   - type: OpenAPI
@@ -143,6 +166,8 @@ apis:
   humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
   baseURL: https://your-nexus-instance.example.com/service/rest
   tags:
+  - Task
+  tags_raw:
   - Tasks
   properties:
   - type: OpenAPI
