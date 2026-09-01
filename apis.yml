@@ -41,7 +41,7 @@ tags:
   - DevOps
   - Docker
   - Maven
-  - Npm
+  - npm
   - Package Management
   - Repository Manager
   - Software Supply Chain
@@ -117,7 +117,7 @@ apis:
   humanURL: https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api
   baseURL: https://your-nexus-instance.example.com/service/rest
   tags:
-  - BlobStores
+  - Blob Stores
   tags_raw:
   - BlobStores
   properties:
