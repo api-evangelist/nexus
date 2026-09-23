@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Sonatype Nexus Repository REST Assets Security API
+  title: Sonatype Nexus Repository REST Security API
   description: 'Sonatype Nexus Repository Manager 3 exposes a REST API
 
     (under /service/rest/) for managing assets, components,
@@ -9,9 +9,7 @@ info:
 
     related resources. The full OpenAPI document for a given
 
-    instance is published at /service/rest/swagger.json.
-
-    '
+    instance is published at /service/rest/swagger.json.'
   version: v1
 servers:
 - url: '{nexus_url}/service/rest'
