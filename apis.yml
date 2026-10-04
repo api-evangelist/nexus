@@ -190,6 +190,9 @@ apis:
   - type: OpenAPI
     url: openapi/nexus-tasks-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/nexus-capability-edges.yml
+    name: Nexus Repository Manager Business Capability Map
   - type: AgenticAccess
     url: agentic-access/nexus-agentic-access.yml
   - type: DomainSecurity
