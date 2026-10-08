@@ -190,6 +190,12 @@ apis:
   - type: OpenAPI
     url: openapi/nexus-tasks-api-openapi.yml
 common:
+  - type: Plans
+    url: plans/nexus-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/nexus-rate-limits.yml
+  - type: FinOps
+    url: finops/nexus-finops.yml
   - type: CapabilityMap
     url: capabilities/nexus-capability-edges.yml
     name: Nexus Repository Manager Business Capability Map
